@@ -1,0 +1,46 @@
+/* ---Directors Section--- */
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border: 1px solid #ff00cc; /* For debugging */
+}
+
+.home__directors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid red;
+  text-align: center; /* Optional: Center the text within the column */
+  max-width: 600px; /* Prevent it from becoming too wide */
+  margin: 0 auto;
+}
+
+.home__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  opacity: 0.2;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: var(--clr-dark-orange);
+}
+
+.home__directors a {
+  font-size: 1rem;
+  color: var(--clr-slate-400);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.5;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.home__directors a:hover {
+  color: #ef9622;
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 1;
+}
