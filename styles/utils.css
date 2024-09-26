@@ -40,7 +40,7 @@
 
 /* Container Details */
 .container {
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
