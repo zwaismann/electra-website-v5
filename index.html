@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/Solo_Star_Orange.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Electra Filmworks is a production company specializing in commercials, music videos, and short films."
+    />
+    <meta
+      name="keywords"
+      content="Electra Filmworks, production company, commercials, music videos, short films"
+    />
+    <meta name="author" content="Electra Filmworks" />
+    <title>Dev Server</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=montserrat@400,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__main">
+        <a
+          href="#home"
+          class="logo header__link"
+          aria-label="Electra Filmworks Homepage"
+        >
+          <img
+            src="/assets/images/Electra_Orange.png"
+            alt="Electra Logo"
+            class="logo-image"
+            loading="eager"
+          />
+        </a>
+        <button aria-label="Open main menu" id="menu-toggle">
+          <img
+            src="/assets/images/Bolt_Star_Orange.png"
+            alt="Main Navigation Menu Button"
+            class="menu-button"
+          />
+        </button>
+        <nav role="navigation" id="nav-menu">
+          <ul class="header__menu">
+            <li class="nav-item">
+              <a class="header__link" href="#home">Directors</a>
+            </li>
+            <li class="nav-item header__line" aria-hidden="true">|</li>
+            <li class="nav-item">
+              <a class="header__link" href="#about">About</a>
+            </li>
+            <li class="nav-item header__line" aria-hidden="true">|</li>
+            <li class="nav-item">
+              <a class="header__link" href="#reps">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile-nav__menu">
+          <li>
+            <a class="mobile-nav__link" href="#home">Directors</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#reps">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End of Mobile Navigation -->
+  </body>
+</html>

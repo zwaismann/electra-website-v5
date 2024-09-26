@@ -1,0 +1,98 @@
+/* xxs */
+/* @media (max-width: 320px) {} */
+
+/* xs */
+/* @media (max-width: 475px) {} */
+
+/* sm */
+/* @media (max-width: 640px) {} */
+
+/* md */
+/* @media (max-width: 768px) {} */
+
+/* lg */
+/* @media (max-width: 1024px) {} */
+
+/* xl */
+/* @media (max-width: 1280px) {} */
+
+/* 2xl */
+/* @media (max-width: 1536px) {} */
+
+/* ---BUTTONS--- */
+.btn a {
+  color: var(--clr-main-text-white);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0px;
+  background-color: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  border: 1px solid var(--clr-dark-orange);
+  transition: all 0.3s;
+}
+
+.btn a:hover {
+  /* transform: scale(1.8); */
+  background-color: var(--clr-dark-orange);
+  color: var(--clr-slate-800);
+}
+
+/* Container Details */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-left: 0.5rem;
+  border: 1px solid #0099ff;
+}
+
+/* xxs */
+@media (max-width: 320px) {
+  .container {
+    min-width: 320px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    min-width: 475px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    min-width: 640px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    min-width: 1024px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    min-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    min-width: 1536px;
+  }
+}
