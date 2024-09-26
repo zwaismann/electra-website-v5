@@ -9,3 +9,7 @@ import '../styles/utils.css'
 import mobileNav from './utils/mobile-nav'
 
 mobileNav()
+
+import scrollIndicators from './utils/indicators.js'
+
+scrollIndicators()

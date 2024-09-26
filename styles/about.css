@@ -1,11 +1,6 @@
 .about {
-  display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center; /* Vertical center */
-  position: absolute; /* Use absolute positioning */
-  top: 50%; /* Push the top edge down by 50% */
-  left: 50%; /* Push the left edge to the right by 50% */
-  transform: translate(-50%, -50%); /* Offset by 50% to truly center */
+  align-items: center;
+  justify-content: center;
 }
 
 .about__image-container {
@@ -24,7 +19,6 @@
 .about-image:hover {
   filter: blur(0px);
   transform: scale(1.1);
-  transform: skew(100);
   opacity: 0.6;
 }
 
@@ -62,7 +56,16 @@
   line-height: 1.8rem;
 }
 
-/* md - TABLET / MOBILE */
+/* 2xl */
+/* @media (max-width: 1536px) {} */
+
+/* xl */
+/* @media (max-width: 1280px) {} */
+
+/* lg */
+/* @media (max-width: 1024px) {} */
+
+/* md */
 @media (max-width: 768px) {
   .about__image-container {
     min-width: 0px;
@@ -76,7 +79,17 @@
 
 /* sm */
 @media (max-width: 640px) {
-  .about__content {
-    width: 30ch;
+  .about__text {
+    font-size: var(--size-sm);
   }
 }
+
+/* xs */
+@media (max-width: 475px) {
+  .about__text {
+    font-size: var(--size-xs);
+  }
+}
+
+/* xxs */
+/* @media (max-width: 320px) {} */
