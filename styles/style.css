@@ -63,6 +63,10 @@ section {
   /* overflow-y: auto; */
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--clr-background-charcoal);

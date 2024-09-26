@@ -9,7 +9,7 @@
   transform: translateX(-50%);
   z-index: 1000;
   position: fixed; /* Keep it fixed at the top */
-  border: 1px solid #0099ff;
+  /* border: 1px solid #0099ff; */
 }
 
 .logo-image {
@@ -30,7 +30,7 @@
   margin-right: 40px;
   transition: all 0.3s ease;
   display: block;
-  border: 1px solid #0099ff;
+  /* border: 1px solid #0099ff; */
 }
 
 .menu-button:hover {
