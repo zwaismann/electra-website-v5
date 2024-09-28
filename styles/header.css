@@ -142,7 +142,7 @@
   color: var(--clr-light-orange);
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 640px) {
   .header__main {
     width: 100vw;
     padding: 20px;
@@ -188,5 +188,16 @@
   /* Hide the divider lines on mobile */
   .header__line {
     display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__link {
+    font-size: var(--size-xs);
+    letter-spacing: 1px;
+  }
+
+  .header__menu {
+    gap: 0.75em;
   }
 }

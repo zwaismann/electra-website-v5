@@ -13,7 +13,7 @@
   z-index: 0;
   filter: blur(4px);
   transition: all 0.8s;
-  border: 1px solid #0099ff;
+  /* border: 1px solid #0099ff; */
 }
 
 .about-image:hover {

@@ -1,0 +1,49 @@
+/* Footer */
+.footer {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+  background: linear-gradient(to right, rgb(239, 150, 34), rgb(255, 78, 0));
+  position: absolute;
+  bottom: 0;
+  gap: 30px;
+}
+
+.footer__logo img {
+  max-height: 25px;
+  min-height: 25px;
+  display: block;
+  margin-left: 50px;
+}
+
+.footer__socials {
+  padding-left: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+.footer__social-media {
+  width: 30px;
+  min-width: 25px;
+  transition: all 0.3s;
+}
+
+.footer__social-media:hover {
+  transform: scale(1.2);
+  filter: brightness(2);
+}
+
+.footer__pattern {
+  flex-grow: 1;
+  width: 65%;
+  height: 110px;
+  display: inline block;
+  background-image: url('/assets/images/Star_Pattern_White.png');
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 10px;
+}

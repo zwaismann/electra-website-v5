@@ -1,0 +1,148 @@
+.reps {
+  align-items: center;
+  justify-content: center;
+}
+
+.reps__header {
+  font-size: var(--size-xl);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--clr-light-orange);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: var(--size-base);
+}
+
+.reps__star-decoration {
+  height: 2rem;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+
+.reps__column-wrapper {
+  display: flex;
+  /* flex-direction: column; */
+  flex-grow: 1;
+  gap: 40px;
+  text-align: center;
+  /* border: 1px solid #0099ff; */
+}
+
+.reps__column {
+  flex-grow: 1;
+  width: 22rem;
+  border: 1px solid #0099ff;
+}
+
+.reps__region {
+  font-size: var(--size-sm);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--clr-light-orange);
+  font-weight: bold;
+  padding-bottom: 1rem;
+  /* border: 1px solid #0099ff; */
+}
+
+.reps__name {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-xl);
+  font-weight: bold;
+  padding-bottom: 0.75rem;
+}
+
+.reps__company {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-base);
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 0.75rem;
+}
+
+.reps__email {
+  font-size: var(--size-xs);
+}
+
+.reps__email a {
+  display: block;
+  color: var(--clr-main-text-white);
+  text-decoration: none;
+  font-size: var(--size-base);
+  font-style: italic;
+  transition: color 0.5s ease, text-decoration 0.5s ease;
+  padding-bottom: 0.75rem;
+}
+
+.reps__email a:hover {
+  color: var(--clr-light-orange);
+}
+
+.reps__tel {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-base);
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 4rem;
+}
+
+/* 2xl */
+/* @media (max-width: 1536px) {} */
+
+/* xl */
+/* @media (max-width: 1280px) {} */
+
+/* lg */
+/* @media (max-width: 1024px) {} */
+
+/* md */
+/* @media (max-width: 768px) {} */
+
+/* sm */
+@media (max-width: 640px) {
+  .reps {
+    /* overflow: auto; */
+  }
+
+  .reps__column-wrapper {
+    gap: 0px;
+  }
+
+  .reps__column-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reps__region {
+    font-size: var(--size-xs);
+    padding-bottom: 0.25rem;
+    /* border: 1px solid #0099ff; */
+  }
+
+  .reps__name {
+    font-size: var(--size-xs);
+    padding-bottom: 0.25rem;
+  }
+
+  .reps__company {
+    font-size: var(--size-xs);
+    padding-bottom: 0.25rem;
+  }
+
+  .reps__email a {
+    font-size: var(--size-xs);
+    padding-bottom: 0.25rem;
+  }
+
+  .reps__tel {
+    font-size: var(--size-xs);
+    padding-bottom: 2rem;
+  }
+}
+
+/* xs */
+/* @media (max-width: 475px) {} */
+
+/* xxs */
+/* @media (max-width: 320px) {} */

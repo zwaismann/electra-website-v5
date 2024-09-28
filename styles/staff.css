@@ -159,6 +159,7 @@
   .staff__wrapper {
     grid-template-columns: 1fr;
     min-width: 475px;
+    border: 1px solid #0099ff;
   }
 
   .staff__member {
