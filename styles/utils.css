@@ -208,8 +208,8 @@ mux-player {
   }
 
   .indicator {
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
   }
 }
 
@@ -228,11 +228,6 @@ mux-player {
   .scroll-down-line {
     width: 30px;
     height: 30px;
-  }
-
-  .indicator {
-    width: 6px;
-    height: 6px;
   }
 }
 
