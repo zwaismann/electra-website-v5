@@ -84,10 +84,17 @@
     <!-- End of Mobile Navigation -->
     <main>
 
-      <!-- Home -->
+      <!-- Home Section -->
       <section id="home" class="home container">
         <!-- Background Video Container -->
-        <div id="background-video-container"></div>
+        <div id="background-video-container">
+          <!-- Video containers for each director -->
+          <div class="director-video" id="video-ld"></div>
+          <div class="director-video" id="video-ag"></div>
+          <div class="director-video" id="video-km"></div>
+          <div class="director-video" id="video-bw"></div>
+          <div class="director-video" id="video-zw"></div>
+        </div>
 
         <nav class="home__directors">
           <h1 class="home__title">Directors</h1>
@@ -95,35 +102,35 @@
             id="rollover-ld"
             href="pages/lorenzo-deguia.html"
             class="home__director-name"
-            data-playback-id="AFkFGpq39025gdiDN5O00rJJ00ei201dSsjx1aPKXK005fOs"
+            data-playback-id="PLAYBACK_ID_FOR_LORENZO"
             >Lorenzo De Guia</a
           >
           <a
             id="rollover-ag"
             href="pages/anthony-garth.html"
             class="home__director-name"
-            data-playback-id="AFkFGpq39025gdiDN5O00rJJ00ei201dSsjx1aPKXK005fOs"
+            data-playback-id="PLAYBACK_ID_FOR_ANTHONY"
             >Anthony Garth</a
           >
           <a
             id="rollover-km"
             href="pages/kailee-mcgee.html"
             class="home__director-name"
-            data-playback-id="AFkFGpq39025gdiDN5O00rJJ00ei201dSsjx1aPKXK005fOs"
+            data-playback-id="PLAYBACK_ID_FOR_KAILEE"
             >Kailee McGee</a
           >
           <a
             id="rollover-bw"
             href="pages/ben-weinstein.html"
             class="home__director-name"
-            data-playback-id="AFkFGpq39025gdiDN5O00rJJ00ei201dSsjx1aPKXK005fOs"
+            data-playback-id="PLAYBACK_ID_FOR_BEN"
             >Ben Weinstein</a
           >
           <a
             id="rollover-zw"
             href="pages/zeev-waismann.html"
             class="home__director-name"
-            data-playback-id="AFkFGpq39025gdiDN5O00rJJ00ei201dSsjx1aPKXK005fOs"
+            data-playback-id="PLAYBACK_ID_FOR_ZEEV"
             >Ze'ev Waismann</a
           >
         </nav>
@@ -137,6 +144,57 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
           ></lord-icon>
+        </div>
+      </section>
+
+      <!-- Featured Work 01 -->
+      <section id="featured-work-01" class="featured-work section">
+        <div class="video-section">
+          <h1 class="featured-projects">Featured Projects</h1>
+          <div class="video-container">
+            <img
+              id="featured-thumbnail-1"
+              class="video-thumbnail"
+              src="/assets/images/Ford_Bronco_DUST_IS_GOLD_thumbnail.png"
+              alt="Ford Bronco Thumbnail"
+              loading="eager"
+              aria-label="Ford Bronco thumbnail"
+              data-playback-id="XdvyCtxC01GgLyKOlSNmhitkhmZgk9L402S6DQPf7bonY"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <img
+            src="/assets/images/Solo_Star_Orange.png"
+            alt="Solo Star Orange"
+            loading="eager"
+            aria-label="Solo Star Orange"
+          />
+          <div class="film-details">
+            <h2 class="director-name">Ze'ev Waismann</h2>
+            <h3 class="project-type">Commercial</h3>
+            <h4 class="project-client">Ford</h4>
+            <h4 class="project-name">Dust is Gold</h4>
+            <div class="more-link btn button">
+              <a href="pages/zeev-waismann.html" aria-label="More from Ze'ev"
+                >More from Ze'ev</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
         </div>
       </section>
 
@@ -380,7 +438,7 @@
     <!-- Scroll Indicators -->
     <div class="scroll-indicators">
       <div class="indicator active" data-target="#home"></div>
-      <!-- <div class="indicator" data-target="#featured-work-01"></div> -->
+      <div class="indicator" data-target="#featured-work-01"></div>
       <!-- <div class="indicator" data-target="#featured-work-02"></div> -->
       <!-- <div class="indicator" data-target="#featured-work-03"></div> -->
       <!-- <div class="indicator" data-target="#featured-work-04"></div> -->

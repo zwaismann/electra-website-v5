@@ -31,7 +31,7 @@
 .reps__column {
   flex-grow: 1;
   width: 22rem;
-  border: 1px solid #0099ff;
+  /* border: 1px solid #0099ff; */
 }
 
 .reps__region {
@@ -101,10 +101,6 @@
 
 /* sm */
 @media (max-width: 640px) {
-  .reps {
-    /* overflow: auto; */
-  }
-
   .reps__column-wrapper {
     gap: 0px;
   }

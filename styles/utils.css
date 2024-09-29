@@ -63,8 +63,6 @@
 }
 
 .indicator {
-  width: 8px;
-  height: 8px;
   background-color: gray;
   border-radius: 50%;
   cursor: pointer;
@@ -208,6 +206,11 @@ mux-player {
     width: 20px;
     height: 20px;
   }
+
+  .indicator {
+    width: 4px;
+    height: 4px;
+  }
 }
 
 /* xs */
@@ -225,6 +228,11 @@ mux-player {
   .scroll-down-line {
     width: 30px;
     height: 30px;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
   }
 }
 
@@ -244,6 +252,11 @@ mux-player {
   .scroll-down-line {
     width: 40px;
     height: 40px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
   }
 }
 
