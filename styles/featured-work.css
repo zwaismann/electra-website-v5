@@ -6,6 +6,7 @@
   align-items: center;
   height: 100vh;
   /* overflow: hidden; */
+  /* border: 1px solid #0099ff; */
 }
 
 .video-section {
@@ -140,6 +141,7 @@
   .featured-projects {
     font-size: var(--size-xs);
     width: 500px;
+    /* border: 1px solid #0099ff; */
   }
 
   .video-container img {
@@ -182,27 +184,20 @@
 
   .video-section {
     align-items: center;
+    /* border: 1px solid #0099ff; */
     width: 500px;
   }
 
   .featured-projects {
-    width: 500px;
     font-size: var(--size-base);
     padding-bottom: 1.5rem;
-  }
-
-  .video-container img {
-    width: 500px;
   }
 
   .right-content {
     width: 500px;
     padding-top: 20px;
     margin-left: 0px;
-  }
-
-  .video-container img {
-    max-width: 500px;
+    /* border: 1px solid #0099ff; */
   }
 
   .right-content img {

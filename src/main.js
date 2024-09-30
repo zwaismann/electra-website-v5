@@ -7,6 +7,8 @@ import '../styles/about.css'
 import '../styles/staff.css'
 import '../styles/reps.css'
 import '../styles/footer.css'
+import '../styles/directors.css'
+import '../styles/bio.css'
 import '../styles/mobile-nav.css'
 import '../styles/utils.css'
 

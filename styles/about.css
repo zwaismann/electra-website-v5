@@ -1,6 +1,10 @@
 .about {
   align-items: center;
   justify-content: center;
+  height: 100dvh;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #0099ff;
 }
 
 .about__image-container {

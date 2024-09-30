@@ -37,17 +37,23 @@
   background-color: var(--clr-dark-orange);
   color: var(--clr-slate-800);
 }
+.btn-contact a {
+  color: var(--clr-slate-600);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: none;
+  padding: 0.75em 1.5em;
+  border-radius: 5px;
+  border: 1px solid var(--clr-slate-600);
+  transition: all 0.3s;
+}
 
-/* Container Details */
-.container {
-  /* scroll-snap-align: start; */
-  height: 100dvh;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-left: 0.5rem;
-  /* border: 1px solid #0099ff; */
+.btn-contact a:hover {
+  /* transform: scale(1.8); */
+  background-color: var(--clr-slate-600);
+  color: var(--clr-main-text-white);
 }
 
 /* ---INDICATORS--- */
@@ -211,6 +217,10 @@ mux-player {
     width: 6px;
     height: 6px;
   }
+
+  .scroll-indicators {
+    right: 15px;
+  }
 }
 
 /* xs */
@@ -236,6 +246,10 @@ mux-player {
   .container {
     max-width: 768px;
   }
+
+  .scroll-indicators {
+    right: 25px;
+  }
 }
 
 /* lg */
@@ -252,6 +266,10 @@ mux-player {
   .indicator {
     width: 8px;
     height: 8px;
+  }
+
+  .scroll-indicators {
+    right: 30px;
   }
 }
 
