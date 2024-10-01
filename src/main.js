@@ -11,15 +11,16 @@ import '../styles/directors.css'
 import '../styles/bio.css'
 import '../styles/mobile-nav.css'
 import '../styles/utils.css'
+import '@mux/mux-player'
 
 import mobileNav from './utils/mobile-nav'
-
-mobileNav()
-
-import scrollIndicators from './utils/indicators.js'
-
-scrollIndicators()
-
+import { initScrollHandler } from './utils/scrollHandler'
 import backgroundVideoEffects from './utils/home.js'
-
 backgroundVideoEffects()
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('section')
+
+  initScrollHandler(sections) // Initialize the scroll handler
+  mobileNav() // Initialize the mobile nav
+})

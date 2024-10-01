@@ -1,20 +1,7 @@
-const scrollIndicators = () => {
-  const sections = document.querySelectorAll('.section')
-  const indicators = document.querySelectorAll('.indicator')
-  const logo = document.querySelector('.logo')
+export const initScrollHandler = sections => {
   let currentSectionIndex = 0
   let isScrolling = false
   const scrollDuration = 750
-
-  // Function to update the active indicator
-  function updateActiveIndicator(activeIndicator) {
-    indicators.forEach(indicator => {
-      indicator.classList.remove('active')
-    })
-    if (activeIndicator) {
-      activeIndicator.classList.add('active')
-    }
-  }
 
   // Smooth scrolling function
   function smoothScrollTo(targetPosition, duration) {
@@ -79,11 +66,6 @@ const scrollIndicators = () => {
     // Ensure the currentSectionIndex is within bounds before accessing sections[currentSectionIndex]
     if (currentSectionIndex >= 0 && currentSectionIndex < sections.length) {
       smoothScrollTo(sections[currentSectionIndex].offsetTop, scrollDuration)
-      updateActiveIndicator(
-        document.querySelector(
-          `.indicator[data-target="#${sections[currentSectionIndex].id}"]`
-        )
-      )
     } else {
       // Revert to previous section if out of bounds
       currentSectionIndex = previousSectionIndex
@@ -95,64 +77,55 @@ const scrollIndicators = () => {
   }
 
   // Add wheel event listener with throttling
-  const throttleDelay = 1000 // Adjust delay as needed
+  const throttleDelay = 250 // Adjust delay as needed
   const throttledOnWheel = throttle(onWheel, throttleDelay)
   window.addEventListener('wheel', throttledOnWheel, { passive: false })
 
-  // Smooth scrolling for indicator clicks
+  // Function to update the active indicator
+  function updateActiveIndicator(activeIndicator) {
+    const indicators = document.querySelectorAll('.indicator')
+    indicators.forEach(indicator => {
+      indicator.classList.remove('active')
+    })
+    if (activeIndicator) {
+      activeIndicator.classList.add('active')
+    }
+  }
+
+  // Intersection Observer to update indicators
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target)
+          updateActiveIndicator(
+            document.querySelector(
+              `.indicator[data-target="#${sections[index].id}"]`
+            )
+          )
+          currentSectionIndex = index // Update current section index
+        }
+      })
+    },
+    {
+      threshold: 0.5, // Adjust threshold as needed
+    }
+  )
+
+  sections.forEach(section => observer.observe(section))
+
+  // Add click event listeners to indicators
+  const indicators = document.querySelectorAll('.indicator')
   indicators.forEach(indicator => {
     indicator.addEventListener('click', event => {
       event.preventDefault()
       const target = indicator.getAttribute('data-target')
       const targetSection = document.querySelector(target)
       if (targetSection) {
-        smoothScrollTo(targetSection.offsetTop, scrollDuration)
+        targetSection.scrollIntoView({ behavior: 'smooth' })
         updateActiveIndicator(indicator)
-        currentSectionIndex = [...sections].indexOf(targetSection)
+        currentSectionIndex = Array.from(sections).indexOf(targetSection)
       }
     })
   })
-
-  // Observe sections and update indicators
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const index = Array.from(sections).indexOf(entry.target)
-          updateActiveIndicator(indicators[index])
-          currentSectionIndex = index // Update current section index on scroll
-        }
-      })
-    },
-    {
-      threshold: 0.1,
-    }
-  )
-
-  // Fix layout shift on page load
-  window.addEventListener('load', () => {
-    if (sections.length > 0) {
-      // Scroll to the top of the first section on page load
-      smoothScrollTo(sections[0].offsetTop, 0)
-      updateActiveIndicator(indicators[0])
-    }
-  })
-
-  sections.forEach(section => observer.observe(section))
-
-  // Scroll to top and reset indicators when logo is clicked
-  if (logo) {
-    logo.addEventListener('click', () => {
-      const targetSection = sections[0]
-      if (targetSection) {
-        smoothScrollTo(targetSection.offsetTop, scrollDuration)
-        currentSectionIndex = 0
-        updateActiveIndicator(
-          document.querySelector(`.indicator[data-target="#${sections[0].id}"]`)
-        )
-      }
-    })
-  }
 }
-
-export default scrollIndicators

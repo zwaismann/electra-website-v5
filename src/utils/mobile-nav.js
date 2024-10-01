@@ -3,26 +3,23 @@ const mobileNav = () => {
   const mobileNav = document.querySelector('.mobile-nav')
   const mobileLinks = document.querySelectorAll('.mobile-nav__link')
 
-  // State
   let isMobileNavOpen = false
+
+  if (!headerBtn || !mobileNav || !mobileLinks.length) return
 
   headerBtn.addEventListener('click', () => {
     isMobileNavOpen = !isMobileNavOpen
-    if (isMobileNavOpen) {
-      mobileNav.style.display = 'flex'
-      document.body.style.overflowY = 'hidden' // Prevent body scroll
-    } else {
-      mobileNav.style.display = 'none'
-      document.body.style.overflowY = 'auto' // Re-enable body scroll
-    }
+    mobileNav.style.display = isMobileNavOpen ? 'flex' : 'none'
+    document.body.style.overflowY = isMobileNavOpen ? 'hidden' : 'auto'
+    headerBtn.setAttribute('aria-expanded', isMobileNavOpen) // Accessibility
   })
 
-  // Close the mobile menu when a link is clicked
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       isMobileNavOpen = false
       mobileNav.style.display = 'none'
-      document.body.style.overflowY = 'auto' // Re-enable body scroll
+      document.body.style.overflowY = 'auto'
+      headerBtn.setAttribute('aria-expanded', 'false') // Accessibility
     })
   })
 }

@@ -127,80 +127,45 @@ mux-player {
   --rendition-selectmenu: none;
 }
 
-/* ---VIDEO THUMBNAIL--- */
-.video-thumbnail {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.video-thumbnail:hover {
-  transform: scale(1.05);
-  filter: brightness(1.2);
-}
-
-mux-player {
-  --play-button: none;
-  /* --live-button: none; */
-  --seek-backward-button: none;
-  --seek-forward-button: none;
-  /* --mute-button: none; */
-  /* --captions-button: none; */
-  /* --airplay-button: none; */
-  --pip-button: none;
-  /* --fullscreen-button: none; */
-  --cast-button: none;
-  --playback-rate-button: none;
-  /* --volume-range: none; */
-  /* --time-range: none; */
-  --time-display: none;
-  /* --duration-display: none; */
-  --rendition-selectmenu: none;
-}
-
 /* ---MODAL--- */
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
-  z-index: 100; /* Increased z-index */
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.75);
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.5s ease; /* Add transition for opacity */
 }
 
-.modal-content {
-  position: relative;
+.modal.show {
+  display: flex; /* Show the modal */
+  opacity: 1; /* Fade in to opacity 1 */
+}
+
+.modal video {
   margin: auto;
-  padding: 0;
-  width: 80%;
-  max-width: 1200px;
+  display: block;
 }
 
 .close {
-  color: #aaa;
   position: absolute;
   top: 10px;
   right: 25px;
+  color: #fff;
   font-size: 35px;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: white;
+  color: #999;
   text-decoration: none;
   cursor: pointer;
-}
-
-#modal-video {
-  width: 100%;
-  height: auto;
 }
 
 /* xxs */
